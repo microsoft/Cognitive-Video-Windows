@@ -2,7 +2,7 @@
 This repo contains the Windows client library & sample for the Microsoft Video API, an offering within [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services), formerly known as Project Oxford.
 * [Learn about the Video API](https://www.microsoft.com/cognitive-services/en-us/video-api)
 * [Read the documentation](https://www.microsoft.com/cognitive-services/en-us/video-api/documentation/home)
-* [Find more SDKs & Samples]()
+* [Find more SDKs & Samples](https://www.microsoft.com/cognitive-services/en-us/SDK-Sample?api=video)
 
 ## The Client Library
 The client library is a thin C\# client wrapper for the Microsoft Video API.  
