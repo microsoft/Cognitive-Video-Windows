@@ -14,22 +14,25 @@ namespace Microsoft.ProjectOxford.Video.Contract
         /// <summary>
         /// Output type of thumbnail result.
         /// </summary>
-        public OutputTypes OutputType { get; set; }
+        public OutputTypes OutputType { get; set; } = OutputTypes.Video;
 
         /// <summary>
         /// Indicates whether output video should include audio track.
         /// </summary>
-        public bool OutputAudio { get; set; }
+        public bool OutputAudio { get; set; } = false;
 
         /// <summary>
         /// Indicates whether output video should have fade in/out when scene changes.
         /// </summary>
-        public bool FadeInFadeOut { get; set; }
+        public bool FadeInFadeOut { get; set; } = false;
 
         /// <summary>
         /// Maximum duration of output video (in seconds).
         /// </summary>
-        public double MaxMotionThumbnailDurationInSecs { get; set; }
+        /// <remarks>
+        /// 0 indicates the duration will be automatically decided by the algorithm.
+        /// </remarks>
+        public double MaxMotionThumbnailDurationInSecs { get; set; } = 0;
 
         internal override string MethodName => "generatethumbnail";
 

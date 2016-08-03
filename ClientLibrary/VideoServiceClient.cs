@@ -33,10 +33,6 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 using System;
-using Microsoft.ProjectOxford.Common;
-using Microsoft.ProjectOxford.Video.Contract;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -44,6 +40,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Microsoft.ProjectOxford.Video.Contract;
+using Microsoft.ProjectOxford.Common;
 
 namespace Microsoft.ProjectOxford.Video
 {
@@ -109,51 +109,6 @@ namespace Microsoft.ProjectOxford.Video
         }
 
         #region APIS
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="video">Video stream.</param>
-        /// <param name="operationType">Operation type.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        public async Task<Operation> CreateOperationAsync(Stream video, OperationType operationType)
-        {
-            var url = string.Format("{0}/{1}", ServiceHost, operationType.ToString().ToLowerInvariant());
-            var response = await SendRequestAsync(HttpMethod.Post, url, video);
-            Operation operation = new Operation(response.Headers.GetValues(OperationLocation).First());
-            return operation;
-        }
-
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="video">Video byte array.</param>
-        /// <param name="operationType">Operation status url.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        public async Task<Operation> CreateOperationAsync(byte[] video, OperationType operationType)
-        {
-            var url = string.Format("{0}/{1}", ServiceHost, operationType.ToString().ToLowerInvariant());
-            var response = await SendRequestAsync(HttpMethod.Post, url, video);
-            Operation operation = new Operation(response.Headers.GetValues(OperationLocation).First());
-            return operation;
-        }
-
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="videoUrl">Video url.</param>
-        /// <param name="operationType">>Operation type.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        public async Task<Operation> CreateOperationAsync(string videoUrl, OperationType operationType)
-        {
-            var url = string.Format("{0}/{1}", ServiceHost, operationType.ToString().ToLowerInvariant());
-            var response = await SendRequestAsync(HttpMethod.Post, url, new VideoUrlRequest() { Url = videoUrl });
-            Operation operation = new Operation(response.Headers.GetValues(OperationLocation).First());
-            return operation;
-        }
-
         /// <summary>
         /// Create video operation.
         /// </summary>
@@ -251,7 +206,6 @@ namespace Microsoft.ProjectOxford.Video
         /// <summary>
         /// Sends the request asynchronous.
         /// </summary>
-        /// <typeparam name="TRequest">The type of the request.</typeparam>
         /// <param name="httpMethod">The HTTP method.</param>
         /// <param name="requestUrl">The request URL.</param>
         /// <param name="requestBody">The request body.</param>

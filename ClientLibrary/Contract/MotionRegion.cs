@@ -15,28 +15,12 @@ namespace Microsoft.ProjectOxford.Video.Contract
 
         /// <summary>
         /// Gets or sets type of region.
-        /// Currently only type supported is "rectangle".
         /// </summary>
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets upper-left coordinate of the region, as a fraction of the overall frame width.
+        /// Gets or sets points of the region shape
         /// </summary>
-        public double X { get; set; }
-
-        /// <summary>
-        /// Gets or sets upper-left coordinate of the region, as a fraction of the overall frame height.
-        /// </summary>
-        public double Y { get; set; }
-
-        /// <summary>
-        /// Gets or sets width of the region, as a fraction of the overall frame width.
-        /// </summary>
-        public double Width { get; set; }
-
-        /// <summary>
-        /// Gets or sets height of the region, as a fraction of the overall frame height.
-        /// </summary>
-        public double Height { get; set; }
+        public MotionPoint[] Points { get; set; }
     }
 }

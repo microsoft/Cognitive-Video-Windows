@@ -10,9 +10,18 @@ namespace Microsoft.ProjectOxford.Video.Contract
     {
         /// <summary>
         /// Gets or sets id of the motion type.
-        /// Currently the value will be 2, indicating that this is a 'motion of interest.'
         /// </summary>
         public int Type { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the motion type.
+        /// </summary>
+        public string TypeName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the locations of the motion occurred.
+        /// </summary>
+        public MotionRectangle[] Locations { get; set; }
 
         /// <summary>
         /// Gets or sets id of the region. 

@@ -2,20 +2,19 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5714988E-4873-4C64-8CAD-852381E59A95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.ProjectOxford.Video</RootNamespace>
-    <AssemblyName>Video.SDK</AssemblyName>
+    <AssemblyName>Microsoft.ProjectOxford.Video</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -44,7 +43,10 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\ServiceError.cs" />
+    <Compile Include="Contract\MotionLocation.cs" />
+    <Compile Include="Contract\MotionPoint.cs" />
+    <Compile Include="Contract\MotionPolygon.cs" />
+    <Compile Include="ServiceError.cs" />
     <Compile Include="Contract\Face.cs" />
     <Compile Include="Contract\FaceEvent.cs" />
     <Compile Include="Contract\FaceDetectionResult.cs" />
@@ -63,8 +65,6 @@
     <Compile Include="Contract\VideoUrlRequest.cs" />
     <Compile Include="Contract\ResultBase.cs" />
     <Compile Include="IVideoServiceClient.cs" />
-    <Compile Include="Common\ClientError.cs" />
-    <Compile Include="Common\ClientException.cs" />
     <Compile Include="Contract\OperationResult.cs" />
     <Compile Include="Contract\OperationStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -33,44 +33,17 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 using System;
-using Microsoft.ProjectOxford.Video.Contract;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.ProjectOxford.Video.Contract;
 
 namespace Microsoft.ProjectOxford.Video
 {
     /// <summary>
     /// Video interface.
     /// </summary>
-    internal interface IVideoServiceClient
+    public interface IVideoServiceClient
     {
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="video">Video stream.</param>
-        /// <param name="operationType">Operation type.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        Task<Operation> CreateOperationAsync(Stream video, OperationType operationType);
-
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="video">Video content as byte array.</param>
-        /// <param name="operationType">Operation type.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        Task<Operation> CreateOperationAsync(byte[] video, OperationType operationType);
-
-        /// <summary>
-        /// Create video operation.
-        /// </summary>
-        /// <param name="videoUrl">Video url.</param>
-        /// <param name="operationType">Operation type.</param>
-        /// <returns>Video operation created.</returns>
-        [Obsolete]
-        Task<Operation> CreateOperationAsync(string videoUrl, OperationType operationType);
-
         /// <summary>
         /// Create video operation.
         /// </summary>
