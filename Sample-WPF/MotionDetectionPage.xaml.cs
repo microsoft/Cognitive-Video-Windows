@@ -81,7 +81,14 @@ namespace VideoAPI_WPF_Samples
             {
                 // Creates a video operation of motion detection
                 Helpers.Log(LogIdentifier, "Start uploading video");
-                Operation operation = await client.CreateOperationAsync(originalStream, new MotionDetectionOperationSettings());
+                MotionDetectionOperationSettings settings = new MotionDetectionOperationSettings
+                {
+                    SensitivityLevel = MotionDetectionOperationSettings.SensitivityLevels.Medium,
+                    DetectLightChange = true,
+                    FrameSamplingValue = 1,
+                    MergeTimeThreshold = 0.0
+                };
+                Operation operation = await client.CreateOperationAsync(originalStream, settings);
                 Helpers.Log(LogIdentifier, "Uploading video done");
 
                 // Starts querying service status
