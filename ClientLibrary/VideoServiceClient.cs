@@ -56,7 +56,7 @@ namespace Microsoft.ProjectOxford.Video
         /// <summary>
         /// The service host.
         /// </summary>
-        private const string ServiceHost = "https://api.projectoxford.ai/video/v1.0";
+        private const string ServiceHost = "https://westus.api.cognitive.microsoft.com/video/v1.0";
 
         /// <summary>
         /// The JSON content type header.
