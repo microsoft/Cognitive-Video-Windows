@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Microsoft.ProjectOxford.Video</id>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <title>Microsoft.ProjectOxford.Video</title>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
@@ -11,8 +11,8 @@
     <iconUrl>https://portalstoragewuprod.azureedge.net/media/Default/Media/Video API/Icons_Vision_Video.svg</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Microsoft Cognitive Services Video Client Library</description>
-    <releaseNotes>Supports parameters of Motion Detection v2</releaseNotes>
-    <copyright>Copyright (c) 2016</copyright>
+    <releaseNotes>Update APIM domain from api.projectoxford.ai to westus.api.cognitive.microsoft.com</releaseNotes>
+    <copyright>Copyright (c) 2017</copyright>
     <tags>Microsoft Project Oxford Video Cognitive Services</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="8.0.2" />
