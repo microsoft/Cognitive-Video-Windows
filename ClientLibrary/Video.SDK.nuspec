@@ -17,7 +17,7 @@
     <dependencies>
       <dependency id="Newtonsoft.Json" version="8.0.2" />
       <dependency id="Microsoft.Net.Http" version="2.2.29" />
-      <dependency id="Microsoft.ProjectOxford.Common" version="1.0.308" />
+      <dependency id="Microsoft.ProjectOxford.Common" version="1.0.324" />
     </dependencies>
   </metadata>
 </package>

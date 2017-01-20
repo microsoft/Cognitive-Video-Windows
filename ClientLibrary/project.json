@@ -2,7 +2,7 @@
   "supports": {},
   "dependencies": {
     "Microsoft.Net.Http": "2.2.29",
-    "Microsoft.ProjectOxford.Common": "1.0.308",
+    "Microsoft.ProjectOxford.Common": "1.0.324",
     "Newtonsoft.Json": "8.0.2"
   },
   "frameworks": {
